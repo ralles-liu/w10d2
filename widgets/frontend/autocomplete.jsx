@@ -10,9 +10,9 @@ export default class AutoComplete extends React.Component{
     }
 
     render(){
-        const mappedNames = this.props.names.map((name) => {
+        const mappedNames = this.props.names.map((name, i) => {
             if (name.startsWith(this.state.input)){
-                return <li>{name}</li>;
+                return <li key={i}>{name}</li>;
             }
         });
 
